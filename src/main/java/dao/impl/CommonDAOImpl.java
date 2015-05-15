@@ -1,6 +1,7 @@
 package dao.impl;
 
 import com.alibaba.fastjson.JSONArray;
+import dao.CommonDAO;
 
 /**
  * Created by caizhongrui on 15/5/15.
@@ -12,7 +13,8 @@ import com.alibaba.fastjson.JSONArray;
  * 青岛特来电版权所有
  * ==============================================
  */
-public class CommonDAO extends GenericDaoImpl{
+public class CommonDAOImpl extends GenericDaoImpl implements CommonDAO{
+    @Override
     public JSONArray getAllContestant(){
         String sql = "";
         return this.getJsonArray(sql);
