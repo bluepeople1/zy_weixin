@@ -113,9 +113,7 @@ public class DateFormat {
 	/**
 	 * 根据指定格式,将字符串解析为日期,提取月份信息
 	 * 
-	 * @param s
 	 *            日期字符串
-	 * @param pattern
 	 *            格式
 	 * @return
 	 * @throws java.text.ParseException
@@ -259,7 +257,6 @@ public class DateFormat {
 	/**
 	 * 获取日期后几天
 	 * 
-	 * @param s
 	 *            日期字符串：格式为yyyy-MM-dd
 	 * @return
 	 * @throws java.text.ParseException
@@ -278,7 +275,6 @@ public class DateFormat {
 	/**
 	 * 获取日期前几天
 	 * 
-	 * @param s
 	 *            日期字符串：格式为yyyy-MM-dd
 	 * @return
 	 * @throws java.text.ParseException
@@ -297,7 +293,6 @@ public class DateFormat {
 	/**
 	 * 获取日期前几天
 	 * 
-	 * @param s
 	 *            日期字符串：格式为yyyy-MM-dd HH24:mi:ss
 	 * @return
 	 * @throws java.text.ParseException
@@ -315,7 +310,6 @@ public class DateFormat {
 	/**
 	 * 获取日期前一天
 	 * 
-	 * @param s
 	 *            日期字符串：格式为yyyy-MM-dd
 	 * @return
 	 * @author yb
@@ -333,7 +327,6 @@ public class DateFormat {
 	/**
 	 * 分钟格式化为小时：1小时20.12分钟
 	 * 
-	 * @param o
 	 *            对象
 	 * @throws
 	 */
@@ -361,7 +354,6 @@ public class DateFormat {
 	/**
 	 * 秒格式化为分钟：1分钟20秒
 	 * 
-	 * @param o
 	 *            对象
 	 * @throws
 	 */
@@ -669,7 +661,6 @@ public class DateFormat {
 	 * 
 	 * @author zj
 	 * @since Jul 6, 2011
-	 * @param date
 	 *            日期
 	 * @param lx
 	 *            y年 m 月 d 日 h 小时 mi 分 s 秒
@@ -923,7 +914,7 @@ public class DateFormat {
 		while (begin.compareTo(end) <= 0) {
 //			System.out.println("begin1==="+dateFormat(begin, "yyyy-MM-dd"));
 			map.put(dateFormat(begin, "yyyy-MM-dd"), i + "周("
-					+ DateUtils.dateFormat(begin, "MM月dd日") + ")");
+					+ DateFormat.dateFormat(begin, "MM月dd日") + ")");
 			begin = org.apache.commons.lang.time.DateUtils.addDays(begin, 7);
 //			System.out.println("begin2==="+dateFormat(begin, "yyyy-MM-dd"));
 			i++;

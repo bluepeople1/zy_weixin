@@ -330,7 +330,6 @@ public class GenericDaoImpl<T> extends HibernateDaoSupport implements
 	/**
 	 * java 添加
 	 * 
-	 * @param clazz
 	 * @return
 	 */
 
